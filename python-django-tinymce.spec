@@ -3,7 +3,7 @@
 
 Name:           python-%{pypi_name}
 Version:        3.2.0
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        A Django application that contains a widget to render a form field as a TinyMCE editor
 
 License:        MIT License
@@ -47,9 +47,12 @@ rm -r %{buildroot}%{python3_sitelib}/testtinymce/
 %license LICENSE.txt tinymce/static/tinymce/license.txt
 %doc README.rst tinymce/static/tinymce/langs/readme.md CONTRIBUTORS.rst CHANGELOG.rst CONTRIBUTING.rst
 %{python3_sitelib}/tinymce
-%{python3_sitelib}/django_tinymce-%{version}-py?.?.egg-info
+%{python3_sitelib}/django_tinymce-%{version}-py*.egg-info
 
 %changelog
+* Sun Jan 16 2022 Chenxiong Qi <qcxhome@gmail.com> - 3.2.0-2
+- Fix python version for 3.10 in files section
+
 * Sun Jan 10 2021 Chenxiong Qi <qcxhome@gmail.com> - 3.2.0-1
 - Rebuild version 3.2.0
 
